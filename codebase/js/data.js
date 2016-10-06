@@ -51,11 +51,10 @@ function grabBoxOfficeData(arr){
 //
 // How do you get the changes on your machine?
 //
-// we can't just do a git pull
-// that's just linked to my master Account
-// let's add another connection
-// we have one named origin
-// what should we add? parent?
+// If I just do a pull on my own repo, it does nothing really. l
+// That's just linked to my master Account, let's add another connection
+// I have the original connection aptly named origin
+// I can add a second connection called parent, or whatever you want.
 //
 // git remote add parent https://github.com/danieloostra/mean-charlie-workspace.git
 //
@@ -67,4 +66,6 @@ function grabBoxOfficeData(arr){
 // parent  https://github.com/danieloostra/mean-charlie-workspace.git (fetch)
 // parent  https://github.com/danieloostra/mean-charlie-workspace.git (push)
 //
-// so now I can git pull parent master and grab what's been updated.
+// so now I can git pull parent master and grab what's been updated. that's
+// just how I've created a new connection to my repo. You can pull to the
+// class repo in the same way.
