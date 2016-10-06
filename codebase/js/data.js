@@ -46,3 +46,11 @@ function grabBoxOfficeData(arr){
 
 // In node... use the console.log
 console.log(grabBoxOfficeData(topFilms));
+
+
+//We have the original repo in Github
+//I forked the repo and cloned it locally
+//after typing git remote -v
+//we can see where we can upate to
+//to have changes updated to the main repo on my repo
+//submit a change
