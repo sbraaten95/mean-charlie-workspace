@@ -45,7 +45,7 @@ function grabBoxOfficeData(arr){
 }
 
 // In node... use the console.log
-console.log(grabBoxOfficeData(topFilms));
+// console.log(grabBoxOfficeData(topFilms));
 
 
 //We have the original repo in Github
@@ -54,3 +54,20 @@ console.log(grabBoxOfficeData(topFilms));
 //we can see where we can upate to
 //to have changes updated to the main repo on my repo
 //submit a change
+//
+// How do you get the changes on your machine?
+//
+// we can't just do a git pull
+// that's just linked to my master Account
+// let's add another connection
+// we have one named origin
+// what should we add? parent?
+//
+// git remote add parent https://github.com/danieloostra/mean-charlie-workspace.git
+//
+// then I can pull from the new parent connection that I just made...
+// look at what I see when I type git remote -v
+//
+// but who says we're limited to one origin
+//
+// why don't we git
