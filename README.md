@@ -1,7 +1,7 @@
 # mean-charlie-workspace
 This repository is for the MEAN stack "Charlie" cohort.
 
-==Charlie Cohort Goals==
+***Charlie Cohort Goals***
 1. Proficiency in MEAN
 2. Belt.
 3. Doing things well. Making a contribution.
