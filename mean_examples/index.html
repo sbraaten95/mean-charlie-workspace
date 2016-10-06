@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <title>function scope</title>
+  </head>
+  <body>
+    <script>
+
+    function twoparams(num, callback) {
+        if (typeof(num) === 'number' && typeof(callback) === 'function') {
+            callback(num);
+        }
+    }
+    </script>
+  </body>
+</html>
+
+
+
+<!-- function thisOne(param){
+  console.log(param);
+}  if you don't explicitly return something it will return undefined-->
+
+<!-- var myNumber=14;
+function takeNum(num){
+  if (typeof(num) === "number") {
+    myNumber += num;
+  } -->
+
+<!-- function twoParam(x,y){
+  if(typeof x === "number" && typeof y==="function" {
+    twoParam(x);
+
+  }
+} -->
+<!-- function twoParam(x,y){
+  if(typeof x === "number" && typeof y==="function" {
+    y(x);
+  }
+}
+
+twoParam(4, someotherfunction);
+
+function someOtherFunction(something){
+  console.log("hey, we got something:", something);
+}
+-->
+
+<!-- function scopeTest() {
+
+/* consider this simple for loop
+    to be the "block" that we were
+    talking about earlier
+*/
+for (var i = 0; i <= 5; i++)
+{
+  var inFor = i;
+}
+
+alert(inFor);  // what happens here?
+
+}
+
+// call the function defined above
+scopeTest( ); -->
+
+
+function caller2(arg, args) {
+    console.log('1');
+    setTimeout(function() {
+        console.log('1.5');
+        if (typeof(arg) === 'function') {
+            console.log(arg(args));
+        }
+        console.log('2');
+    }, 2000)
+    for(var i = 0; i< 10000; i++){
+      console.log(1)
+    }
+    console.log('3')
+    return '4';
+}
+
+function myDoubleConsoleLog(arg1, arg2) {
+    if (typeof(arg1) === 'function') {
+        console.log(arg1(), arg2);
+    }
+}
+
+function stringReturnOne() {
+    return '5';
+}
+
+myDoubleConsoleLog(stringReturnOne, caller2(multiplyByTen, 5))
+
+function multiplyByTen(num) {
+    return num * 10;
+}
