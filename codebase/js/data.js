@@ -23,20 +23,19 @@ var topFilms =[{
 function grabBoxOfficeData(arr){
   // var results = [];
 
-
-  //method 2
-  // arr.forEach(function(value){
-  //   results.push("$" + value.boxOffice);
-  // });
-
-
-  //Method 1
-  // for (var i = 0; i < arr.length; i++) {
-  //   results.push("$"+arr[i].boxOffice);
-  // };
-
-  return results;
-}
+//   method 2
+//   arr.forEach(function(value){
+//     results.push("$" + value.boxOffice);
+//   });
+//
+//
+//   Method 1
+//   for (var i = 0; i < arr.length; i++) {
+//     results.push("$"+arr[i].boxOffice);
+//   };
+//
+//   return results;
+// }
 
 // In node... use the console.log
 // console.log(grabBoxOfficeData(topFilms));
