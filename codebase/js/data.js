@@ -58,7 +58,10 @@ function grabBoxOfficeData(arr){
 //
 // git remote add parent https://github.com/danieloostra/mean-charlie-workspace.git
 //
-// then I can pull from the new parent connection that I just made...
+// Now in my case, I can pull from my own origin... it's strange, but you can
+// also create a connection to the class repo in the same way. Then you can
+// goto gitHub to make the pull requests.
+//
 // look at what I see when I type git remote -v
 //
 // origin  https://github.com/danieloostra/mean-charlie-workspace.git (fetch)
