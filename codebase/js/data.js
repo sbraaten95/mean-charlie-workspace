@@ -68,6 +68,9 @@ function grabBoxOfficeData(arr){
 // then I can pull from the new parent connection that I just made...
 // look at what I see when I type git remote -v
 //
-// but who says we're limited to one origin
+// origin  https://github.com/danieloostra/mean-charlie-workspace.git (fetch)
+// origin  https://github.com/danieloostra/mean-charlie-workspace.git (push)
+// parent  https://github.com/danieloostra/mean-charlie-workspace.git (fetch)
+// parent  https://github.com/danieloostra/mean-charlie-workspace.git (push)
 //
-// why don't we git
+// so now I can git pull parent master and grab what's been updated.
