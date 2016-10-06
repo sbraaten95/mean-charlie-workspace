@@ -23,6 +23,8 @@ var topFilms =[{
 function grabBoxOfficeData(arr){
   // var results = [];
 
+// Is there another less code way?
+
 //   method 2
 //   arr.forEach(function(value){
 //     results.push("$" + value.boxOffice);
@@ -34,8 +36,8 @@ function grabBoxOfficeData(arr){
 //     results.push("$"+arr[i].boxOffice);
 //   };
 //
-//   return results;
-// }
+  return results;
+}
 
 // In node... use the console.log
 // console.log(grabBoxOfficeData(topFilms));
