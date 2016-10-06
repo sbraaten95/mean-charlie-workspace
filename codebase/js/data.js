@@ -23,12 +23,6 @@ var topFilms =[{
 function grabBoxOfficeData(arr){
   // var results = [];
 
-  //Method 3
-  //This returns a newe array with the results.
-  return arr.map(function(value){
-    return "$" + value.boxOffice;
-  });
-
 
   //method 2
   // arr.forEach(function(value){
