@@ -1,0 +1,36 @@
+<div ng-controller="orderController as oc">
+	<h1>Add a new order</h1>
+	<form ng-submit="oc.create()">
+		Customer
+		<select ng-model="oc.newOrder.customer">
+			<option ng-repeat="customer in oc.customers">{{customer.name}}</option>
+		</select>
+		Quantity
+		<select ng-model="oc.newOrder.quantity">
+			<option ng-repeat="i in oc.currentQuantity">{{i}}</option>
+		</select>
+		Product
+		<select ng-model="oc.index" ng-change="oc.newQuantity()">
+			<option ng-repeat="product in oc.products track by $index" value="{{$index}}">{{product.name}}</option>
+		</select>
+		<input type="submit" value="Add">
+	</form>
+	<table>
+		<thead>
+			<tr>
+				<th>Customer Name</th>
+				<th>Product</th>
+				<th>Quantity</th>
+				<th>Date</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="order in oc.orders">
+				<td>{{order.customer}}</td>
+				<td>{{order._product.name}}</td>
+				<td>{{order.quantity}}</td>
+				<td>{{order.created_at}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

@@ -1,0 +1,24 @@
+<div ng-controller="customerController as cc">
+	<h1>Add a new customer</h1>
+	<form ng-submit="cc.create()">
+		Customer Name: <input type="text" ng-model="cc.newCustomer.name">
+		<input type="submit" value="Add">
+	</form>
+	<table>
+		<thead>
+			<tr>
+				<th>Customer Name</th>
+				<th>Created Date</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="customer in cc.customers">
+				<td>{{customer.name}}</td>
+				<td>{{customer.created_at}}</td>
+				<td><button ng-click="cc.delete(customer._id)">Delete</button></td>
+			</tr>
+		</tbody>
+	</table>
+	<p ng-if="cc.errors.length > 0">{{cc.errors}}</p>
+</div>

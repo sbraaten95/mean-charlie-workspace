@@ -14,8 +14,14 @@ app.factory('factory', ['$http', function ($http){
 			if (data.data.errors) {
 				callback(data);
 			} else {
-				console.log(data);
+				callback(data);
 			}
+		})
+	}
+
+	factory.login = function (triedUser, callback){
+		$http.post('/login', triedUser).then(function (data){
+			console.log(data);
 		})
 	}
 
@@ -29,13 +35,19 @@ app.controller('controller', ['factory', function (factory){
 	this.register = function (){
 		this.errors = {};
 		factory.register(this.newUser, function (data){
-			console.log(data.data.errors);
 			if (data.data.errors) {
 				_this.errors = data.data.errors;
 				console.log(_this.errors)
 			} else {
-				this.users = factory.getUsers();
+				_this.users = data.data;
 			}
-		})
-	}
-}])
+		});
+		console.log(this.users);
+	};
+
+	this.login = function (){
+		factory.login(this.inputUser, function (data){
+			console.log(data)
+		});
+	};
+}]);

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mini Mean Store</title>
+	<script src="angular/angular.js"></script>
+	<script src="angular-route/angular-route.js"></script>
+	<script src="assets/app.js"></script>
+	<script src="assets/customerController.js"></script>
+	<script src="assets/customerFactory.js"></script>
+	<script src="assets/productController.js"></script>
+	<script src="assets/productFactory.js"></script>
+	<script src="assets/orderController.js"></script>
+	<script src="assets/orderFactory.js"></script>
+</head>
+<body ng-app="app">
+	<ul>
+		<li><a href="#/dashboard">Dashboard</a></li>
+		<li><a href="#/products">Products</a></li>
+		<li><a href="#/orders">Orders</a></li>
+		<li><a href="#/customers">Customers</a></li>
+		<li><a href="#/settings">Settings</a></li>
+	</ul>
+	<div ng-view="">
+	</div>
+</body>
+</html>

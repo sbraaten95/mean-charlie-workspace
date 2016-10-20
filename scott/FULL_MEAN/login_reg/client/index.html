@@ -10,15 +10,21 @@
 <body ng-app="app">
 	<div ng-controller="controller as co">
 		<form ng-submit="co.register()">
-			<input type="text" ng-model="co.newUser.firstName">
-			<input type="text" ng-model="co.newUser.lastName">
-			<input type="text" ng-model="co.newUser.email">
-			<input type="text" ng-model="co.newUser.password">
-			<input type="text" ng-model="co.newUser.password_confirm">
-			<input type="text" ng-model="co.newUser.birthday">
+			First Name: <input type="text" ng-model="co.newUser.firstName">
+			Last Name: <input type="text" ng-model="co.newUser.lastName">
+			Email: <input type="text" ng-model="co.newUser.email">
+			Password: <input type="password" ng-model="co.newUser.password">
+			Confirm Password: <input type="password" ng-model="co.newUser.password_confirm">
+			Birthday: <input type="text" ng-model="co.newUser.birthday">
 			<input type="submit" value="register">
 		</form>
 		<p ng-if="co.errors">{{co.errors}}</p>
+		<form ng-submit="co.login()">
+			Email: <input type="text" ng-model="co.inputUser.email">
+			Password: <input type="password" ng-model="co.inputUser.password">
+			<input type="submit" value="login">
+		</form>
+		<p ng-repeat="user in co.users">{{user.name}}</p>
 	</div>
 </body>
 </html>
